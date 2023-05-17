@@ -48,11 +48,11 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
 
-        Desarrollador de Software fullstack de aplicaciones web y móviles.
-        Poseo conocimientos sólidos en lenguajes de programación como Java y Javascript, así
-        como en tecnologías como Springboot, Nodejs y React. Mi pasión por la tecnología y
-        el aprendizaje continuo me impulsan a buscar soluciones innovadoras y eficientes para los
-        desafíos en el desarrollo de software.
+        Soy un desarrollador de software fullstack especializado en aplicaciones web y móviles, bilingüe.
+        Poseo experiencia en lenguajes de programación como Java y JavaScript, 
+        así como en tecnologías como Spring Boot, Node.js y React. 
+        Mi pasión por la tecnología y mi enfoque en el aprendizaje continuo 
+        me motivan a buscar soluciones innovadoras y eficientes para los desafíos en el desarrollo de software.
 
       </motion.p>
 
