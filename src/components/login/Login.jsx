@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Login.css';
 import appFirebase from '../../credentials';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
@@ -7,7 +7,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const auth = getAuth(appFirebase);
 
-const Login = ({ setUser, userMail }) => {
+// eslint-disable-next-line react/prop-types
+const Login = ({ userMail }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
