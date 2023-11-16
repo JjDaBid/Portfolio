@@ -1,4 +1,5 @@
-import logo from "./logo.svg";
+import logo from "./cic.png";
+import background from "./bg.jpg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -21,18 +22,20 @@ import sketchup from "./tech/sketchup.png";
 import springboot from "./tech/springboot.png";
 import youtube from "./tech/youtube.png";
 
-import scotiabank from "./company/scotiabank.png";
 import freelancer from "./company/freelancer.png";
 import cic from "./company/cic.png"
 
-import alimentos from "./alimentos.png";
 import todo from "./todo.png";
-import consultorio1 from "./consultorio1.png"
-import consultorio2 from "./consultorio2.png"
-import oficina1 from "./oficina1.png"
+import politicaSeguridadPaciente from "./politicaSeguridadPaciente.png"
+import usoAntibioticos from "./usoAntibioticos.png"
+import reglamentoSalas from "./reglamentoSalas.png"
+import participacionSocial from "./participacionSocial.png"
+
+
 
 export {
   logo,
+  background,
   backend,
   creator,
   mobile,
@@ -50,16 +53,15 @@ export {
   mongodb,
   nodejs,
   oracle,
+  politicaSeguridadPaciente,
   reactjs,
   sketchup,
   springboot,
   youtube,
   freelancer,
-  scotiabank,
-  cic,
-  alimentos,
-  todo, 
-  consultorio1,
-  consultorio2,
-  oficina1,
+  cic, 
+  todo,
+  usoAntibioticos,
+  reglamentoSalas,
+  participacionSocial
 };

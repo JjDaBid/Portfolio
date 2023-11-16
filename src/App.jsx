@@ -1,30 +1,87 @@
-import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, Renders, StarsCanvas } from './components';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Navbar } from './components/container';
+import appFirebase from './credentials';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
-const App = () => { 
+import { useEffect, useState } from 'react';
+import MainContent from './components/container/MainContent';
+import { Login } from './components/login/Login';
+import { Container } from './components/documentsBox/Container'
+import Videos from './components/documentsBox/Videos';
+
+const auth = getAuth(appFirebase);
+
+const App = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (fireBaseUser) => {
+      if (fireBaseUser) {
+        setUser(fireBaseUser);
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
+
   return (
-    <div>
+    <>
       <BrowserRouter>
-        <div className="relative z-0 bg-primary">
-          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-            <Navbar />
-            <Hero />
-          </div>
-          <About />
-          <Experience />
-          <Tech />
-          <Works />
-          <Renders />
-  
-          <div className="relative z-0">
-            <Contact />
-            <StarsCanvas />
-          </div>
-        </div>
-      
-      </BrowserRouter>
-    </div>
-  )
-}
+      <>
+        <div className="relative z-0">
+          <Navbar userMail={user ? user.email : null} />         
 
-export default App
+          <Routes>
+            <Route
+              path="/documents"
+              element={
+                user ? (
+                  <Container userMail={user.email}/> 
+                ) : (
+                  <Login setUser={setUser} />
+                )
+              }
+            />
+
+            <Route
+              path="/videos"
+              element={
+                user ? (
+                  <Videos userMail={user.email}/> 
+                ) : (
+                  <Login setUser={setUser} />
+                )
+              }
+            />          
+
+            <Route
+              path="/register"
+              element={
+                user && user.email === 'auditoriaycalidadcic@gmail.com' ? (
+                  <Login setUser={setUser} isRegister={true} />
+                ) : (
+                  <Navigate to="/home" />
+                )
+              }
+            />
+        
+          <Route 
+            path="/login" element={<Login setUser={setUser} />}            
+          />
+
+            <Route
+              path="/"
+              element={
+                <MainContent/>
+              }
+            />
+
+          </Routes>
+        </div>
+        </>
+      </BrowserRouter>
+    </>
+  );
+};
+
+export default App;

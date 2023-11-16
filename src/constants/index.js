@@ -15,52 +15,57 @@ import {
     git,  
     blender,
     sketchup,
-    lumion,
-    scotiabank,    
+    lumion,    
     freelancer,
-    cic,
-    consultorio1,
-    alimentos,
-    todo,
-    consultorio2,
-    oficina1,
+    cic,    
+    todo,    
+    politicaSeguridadPaciente,
+    usoAntibioticos,
+    reglamentoSalas,
+    participacionSocial
     
   } from "../assets";
   
   export const navLinks = [
     {
-      id: "about",
-      title: "Quién Soy",
+      id: "documents",
+      title: "Documentos",
     },
     {
-      id: "work",
-      title: "Experiencia",
-    },
-    {
-      id: "projects",
-      title: "Proyectos",
-    },
-    {
-      id: "contact",
-      title: "Contacto",
+      id: "videos",
+      title: "Videos",
     },
   ];
   
-  const services = [
+  const standards = [
     {
-      title: "Desarrollador web",
-      icon: web,
+      id: "human-resources",
+      title: "Talento Humano",
+      icon: web,      
     },
     {
-      title: "Desarrollador FullStack",
-      icon: mobile,
+      id: "infrastructure",
+      title: "Infraestructura",
+      icon: mobile,      
     },
     {
-      title: "Diseñador UX/UI",
+      id: "equipment",
+      title: "Dotación",
       icon: backend,
     },
     {
-      title: "Diseñador 3D",
+      id: "medicines",
+      title: "Medicamentos",
+      icon: creator,
+    },
+    {
+      id: "priority_processes",
+      title: "Procesos Prioritarios",
+      icon: creator,
+    },
+    {
+      id: "clinic_history",
+      title: "Historia Clínica",
       icon: creator,
     },
   ];
@@ -120,42 +125,25 @@ import {
     },
   ];
   
-  const experiences = [
+  const humanResources = [
     {
-      title: "Desarrollador Web",
-      company_name: "Clínica Internacional de Cirugía",
+      title: "Capacidad Instalada",      
       icon: cic,
       iconBg: "#383E56",
-      date: "Septiembre 2021 - Actual",
+      date: "Septiembre 2023",
       points: [
-        "Desarrollo y mantenimiento del software de gestión de inventarios de farmacia.",
-        "Desarrollo y mantenimiento del modulo de registro de pacientes.",
-        "Diseño y elaboración de protocolos para optimizar procesos y procedimientos.",
-        "Diseño y creación de campañas y materiales audiovisuales para promoción y difusión."
+        
       ],
     },
     {
-      title: "Diseño y Render de Arquitectura",
-      company_name: "Freelancer",
+      title: "Programa de Capacitaciones",
       icon: freelancer,
       iconBg: "#E6DEDD",
-      date: "Junio 2022 - Actual",
-      points: [
-        "Creación de modelos tridimensionales y representación visual realista de instalaciones físicas.",
-        "Renderizado y animación de modelos 3D."        
+      date: "Septiembre 2023",
+      points: [             
       ],
     },
-    {
-      title: "CCA - Customer Care Advisor",
-      company_name: "Gestión de Servicios Globales SCOTIABANK",
-      icon: scotiabank,
-      iconBg: "#E6DEDD",
-      date: "Febrero 2020 - Marzo 2021",
-      points: [
-        "Identificar y resolver requerimientos bancarios de los clientes de Scotiabank en Canadá.",
-        " brindar soluciones personalizadas dando como resultado experiencias memorables para los clientes."        
-      ],
-    },    
+       
   ];
   
   const testimonials = [
@@ -177,7 +165,7 @@ import {
     },
     {
       testimonial:
-        "Los desarrollo han permitido mejorar la eficiencia en la prestación de los servicios",
+        "Los desarrollos han permitido mejorar la eficiencia en la prestación de los servicios",
       name: "Yohanna Carvajal",
       designation: "Supervisora de Contratos",
       company: "Subred Sur Occidente E.S.E.",
@@ -185,28 +173,7 @@ import {
     },
   ];
   
-  const projects = [
-    {
-      name: "Alimentos",
-      description:
-        "Aplicación web que permite calcular las calorías de los alimentos en base a su valor nutricional, además de brindarte la capacidad de guardar, editar y eliminar los alimentos de forma sencilla.",
-      tags: [
-        {
-          name: "java",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "swing",
-          color: "green-text-gradient",
-        },
-        {
-          name: "photoshop",
-          color: "pink-text-gradient",
-        },        
-      ],
-      image: alimentos,
-      source_code_link: "https://github.com/JjDaBid/alimentoscalorias",
-    },
+  const projects = [   
     {
       name: "Today Board",
       description:
@@ -232,68 +199,89 @@ import {
 
   const renders = [              
     {
-      name: "Consultorio Dr Ramos",
+      name: "Política de Seguridad del Paciente",
       description:
-        "Render de un consultorio de cirugía plástica y reconstructiva.",
+        "reducir errores médicos, mejorar calidad de atención y salvar vidas.",
       tags: [
         {
-          name: "sketchup",
+          name: "SeguridadDelPaciente",
           color: "blue-text-gradient",
         },
         {
-          name: "lumion",
+          name: "PolíticasSanitarias",
           color: "green-text-gradient",
         },
         {
-          name: "blender",
+          name: "CuidadosMédicosSeguros",
           color: "pink-text-gradient",
         },        
       ],
-      image: consultorio1,
-      source_code_link: "https://www.youtube.com/watch?v=2TsydqPAuXk",
+      image: politicaSeguridadPaciente,
+      source_code_link: "https://www.youtube.com/watch?v=tOYsOjvS-oY",
     },
     {
-      name: "Consultorio Cirugía Plástica y Reconstructiva",
+      name: "Uso Adecuado de Antibióticos",
       description:
-        "Render de un consultorio de cirugía plástica y reconstructiva.",
+        "12 recomendaciones clave para el uso apropiado de antibióticos, promoviendo su efectividad y combatiendo la resistencia bacteriana.",
       tags: [
         {
-          name: "sketchup",
+          name: "#Antibióticos",
           color: "blue-text-gradient",
         },
         {
-          name: "lumion",
+          name: "PrevenciónResistenciaBacteriana",
           color: "green-text-gradient",
         },
         {
-          name: "blender",
+          name: "AntibióticosResponsables",
           color: "pink-text-gradient",
         },        
       ],
-      image: consultorio2,
-      source_code_link: "https://www.youtube.com/watch?v=8vGAqTEQ3i4",
+      image: usoAntibioticos,
+      source_code_link: "https://www.youtube.com/watch?v=z_av_yCUow4",
     },
     {
-      name: "Ruta de Evacuación",
+      name: "Reglamento de Salas de Cirugía",
       description:
-        "Ruta de evacuación de una oficina.",
+        "Normas clave en las salas de cirugía para garantizar prácticas seguras y estándares de atención en procedimientos quirúrgicos.",
       tags: [
         {
-          name: "sketchup",
+          name: "SalasDeCirugía",
           color: "blue-text-gradient",
         },
         {
-          name: "lumion",
+          name: "NormasDeSalas",
           color: "green-text-gradient",
         },
         {
-          name: "blender",
+          name: "SeguridadDelPaciente",
           color: "pink-text-gradient",
         },        
       ],
-      image: oficina1,
-      source_code_link: "https://youtu.be/fmp9kdMXs_s",
+      image: reglamentoSalas,
+      source_code_link: "https://www.youtube.com/watch?v=xQReUxn1M4M",
     },
+    {
+      name: "Política de Participación Social en Salud",
+      description:
+        "La importancia de la participación social en políticas de salud, empoderando a la comunidad para mejorar la atención y resultados.",
+      tags: [
+        {
+          name: "ParticipaciónSocial",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "PolíticasDeSalud",
+          color: "green-text-gradient",
+        },
+        {
+          name: "ComunidadYSalud",
+          color: "pink-text-gradient",
+        },        
+      ],
+      image: participacionSocial,
+      source_code_link: "https://www.youtube.com/watch?v=JCZXfG8u_H4",
+    }
   ];
   
-  export { services, technologies, experiences, testimonials, projects, renders };
+  export { standards, technologies, humanResources, testimonials, projects, renders };

@@ -1,0 +1,15 @@
+.contenedorProgressBar{
+    bottom: 0;
+    margin-bottom: 30px;
+    height: 53px;
+    right: 0;
+    width: 100%;
+    background-color: dark;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.progressText{
+    text-align: center;
+    display: grid;
+}
