@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Login.css';
+import './login.css';
 import appFirebase from '../../credentials';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import Swal from 'sweetalert2';
