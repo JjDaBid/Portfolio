@@ -29,6 +29,7 @@ const ButtonList = ({standards, filterStandard}) => {
                 className='w-full red-gray-gradient p-[1px] rounded-[20px] shadow-card'>
                 <button
                   key={standar}  
+                  // eslint-disable-next-line react/no-unknown-property
                   options={{ max: 45, scale: 1, speed: 450 }}
                   className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[220px] flex justify-evenly items-center flex-col w-100 text-white text-[20px] font-bold text-center' 
                   type="button"                  

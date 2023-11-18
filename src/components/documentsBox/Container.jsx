@@ -49,7 +49,6 @@ const Container = () => {
     }
 
     return (
-
         <>
             <div className='bg-black'>
                 <Form/> 
@@ -65,11 +64,9 @@ const Container = () => {
                 <List 
                     list={list}
                     searchedDocument={searchedDocument}
-                />
-                
+                />                
             </div>
-        </>
-        
+        </>        
     )
 }
 

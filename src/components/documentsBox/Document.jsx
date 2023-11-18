@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react'
 import appFirebase from '../../credentials'
-import { getFirestore, collection, getDocs, deleteDoc, doc, getDoc } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, deleteDoc, doc } from 'firebase/firestore'
 import { getStorage, ref, deleteObject } from 'firebase/storage'
 
 const Document = () => {
