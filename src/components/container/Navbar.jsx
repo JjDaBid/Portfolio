@@ -8,7 +8,6 @@ import appFirebase from "../../credentials";
 
 const auth = getAuth(appFirebase);
 
-// eslint-disable-next-line react/prop-types
 const Navbar = ({ userMail }) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -110,7 +109,7 @@ const Navbar = ({ userMail }) => {
                   <Link to={link.id}>{link.title}</Link>
                 </li>
               ))}
-              {isLoggedIn ? (
+              {isLoggedIn && (
                 <li
                   className="text-secondary link-light cursor-pointer text-[16px] font-poppins font-medium"
                   onClick={() => {
@@ -120,12 +119,13 @@ const Navbar = ({ userMail }) => {
                 >
                   Cerrar Sesión
                 </li>
-              ) : (
+              )}
+              {!isLoggedIn && (
                 <li
                   className="text-white text-[16px] font-poppins font-medium cursor-pointer"
                   onClick={() => {
                     setToggle(!toggle);
-                    // Aquí puedes agregar la lógica para manejar el inicio de sesión
+                    // Agrega aquí la lógica para el inicio de sesión
                   }}
                 >
                   <Link to="/login">
@@ -134,6 +134,26 @@ const Navbar = ({ userMail }) => {
                 </li>
               )}
             </ul>
+          </div>
+
+          {/* Agrega esta sección para el inicio de sesión y cierre de sesión en pantallas grandes */}
+          <div className="hidden sm:flex gap-5">
+            {isLoggedIn ? (
+              <button
+                className="text-secondary link-light text-[15px] cursor-pointer"
+                onClick={handleSignOut}
+              >
+                Cerrar Sesión
+              </button>
+            ) : (
+              <Link to="/login">
+                <button
+                  className="text-white text-[15px] cursor-pointer"
+                >
+                  Iniciar Sesión
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
