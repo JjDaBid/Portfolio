@@ -82,7 +82,7 @@ const Navbar = ({ userMail }) => {
                   >
                     Videos
                   </ul>
-                </Link>
+                </Link>                
               </ul>
 
               <div className="hidden sm:flex gap-2 align-middle text-[15px]">
@@ -138,17 +138,32 @@ const Navbar = ({ userMail }) => {
                 <a href={`${link.id}`}>{link.title}</a>
               </li>
             ))}
-            {isLoggedIn && (
-              <li
-                className="text-secondary link-light cursor-pointer text-[16px] font-poppins font-medium"
-                onClick={() => {
+
+              {isLoggedIn ? (
+                <li
+                  className="text-secondary link-light cursor-pointer text-[16px] font-poppins font-medium"
+                  onClick={() => {
+                    setToggle(!toggle);
+                    handleSignOut();
+                  }}
+                >
+                  Cerrar Sesión
+                </li>
+              ) : (
+                <div className="text-white text-[16px] font-poppins font-medium cursor-pointer" onClick={() => {
                   setToggle(!toggle);
-                  handleSignOut();
-                }}
-              >
-                Cerrar Sesión
-              </li>
-            )}
+                  // Aquí puedes agregar la lógica para manejar el inicio de sesión
+                }}>
+                  <Link to="/login">
+                    <button
+                      className="text-white text-[15px] cursor-pointer"
+                    >
+                      Iniciar Sesión
+                    </button>
+                  </Link>
+                </div>
+              )}
+            
           </ul>
         </div>
       </div>
