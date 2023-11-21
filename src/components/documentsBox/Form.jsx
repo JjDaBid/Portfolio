@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { saveInfo, fileHandler } from "../../logic/logic"
 import { styles } from "../../styles";
 import ProgressBar from "./ProgressBar";
@@ -35,6 +35,7 @@ const Form = () => {
               <option value="Medicamentos">Medicamentos</option>
               <option value="Procesos Prioritarios">Procesos Prioritarios</option>
               <option value="Historia Clinica">Historia Clínica</option>
+              <option value="Lavado de Manos">Lavado de Manos</option>
             </select>
           </div>
           <label className="w-full">Servicio: </label>
@@ -46,7 +47,7 @@ const Form = () => {
               <option value="Servicio Farmacéutico">Servicio Farmacéutico</option>
               <option value="Servicio Quirúrgico">Servicio Quirúrgico</option>
               <option value="Toma de Muestras">Toma de Muestras</option>
-              <option value="Toma de Muestras">Todos los servicios</option>
+              <option value="Todos los Servicios">Todos los Servicios</option>
           </select>
 
           </div>

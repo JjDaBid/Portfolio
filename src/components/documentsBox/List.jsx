@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { deleteDocument } from '../../logic/logic'
-import { getList } from '../../logic/logic';
 
 const List = (props) => {
 
