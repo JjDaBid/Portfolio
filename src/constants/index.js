@@ -68,6 +68,12 @@ import {
       title: "Historia Clínica",
       icon: creator,
     },
+    {
+      id: "consents",
+      title: "Consentimientos Informados",
+      icon: creator,
+    },
+    
   ];
   
   const technologies = [
