@@ -37,7 +37,7 @@ const Form = () => {
               <option value="Historia Clinica">Historia Clínica</option>
               <option value="Lavado de Manos">Lavado de Manos</option>
               <option value="Formatos">Formatos</option>
-              <option value="Formatos">Consentimientos</option>
+              <option value="Consentimientos">Consentimientos</option>
             </select>
           </div>
           <label className="w-full">Servicio: </label>
